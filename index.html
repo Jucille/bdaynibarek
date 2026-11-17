@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Episode 22: Happy Birthday, Barek!</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="hero" id="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="big22" aria-hidden="true">22</div>
+    <p class="ep">Episode 22</p>
+    <p class="hb">Happy birthday,</p>
+    <h1 id="name">Barek</h1>
+    <p class="who">Rex Agustino</p>
+    <p class="jp">誕生日おめでとう</p>
+    <svg class="gauge" viewBox="0 0 300 220" role="img" aria-label="Speedometer showing 22">
+      <g id="ticks"></g>
+      <g id="needle">
+        <line x1="150" y1="150" x2="150" y2="50" stroke="var(--red)" stroke-width="4" stroke-linecap="round" />
+      </g>
+      <circle cx="150" cy="150" r="9" fill="var(--ink)" />
+      <text class="num" x="150" y="206" id="num">0</text>
+      <text class="unit" x="150" y="226">years</text>
+    </svg>
+    <button id="rev" type="button">Let's Celebrate 22</button>
+    <p class="rev" id="revtxt" aria-live="polite"></p>
+    <div class="city" aria-hidden="true"><svg viewBox="0 0 800 90" preserveAspectRatio="none">
+        <g fill="#000">
+          <rect x="10" y="40" width="60" height="50" />
+          <rect x="80" y="15" width="45" height="75" />
+          <rect x="135" y="50" width="70" height="40" />
+          <rect x="215" y="25" width="50" height="65" />
+          <rect x="275" y="55" width="80" height="35" />
+          <rect x="365" y="10" width="45" height="80" />
+          <rect x="420" y="45" width="70" height="45" />
+          <rect x="500" y="22" width="55" height="68" />
+          <rect x="565" y="50" width="75" height="40" />
+          <rect x="650" y="18" width="50" height="72" />
+          <rect x="710" y="42" width="90" height="48" />
+        </g>
+      </svg></div>
+    <div class="road" aria-hidden="true"></div>
+    <div class="parked" id="parked" aria-hidden="true"></div>
+  </header>
+
+  <section class="photos" id="photos" aria-label="Our photos">
+    <h2>22 Years in Frames</h2>
+    <p>Every photo holds a memory, and every memory tells a part of your story.</p>
+    <div class="strip">
+      <div class="track" id="t1"></div>
+    </div>
+    <div class="strip rv">
+      <div class="track" id="t2"></div>
+    </div>
+  </section>
+
+  <main>
+    <section class="ignite" id="ignite">
+      <div class="seal" aria-hidden="true"><svg viewBox="0 0 120 90">
+          <rect x="10" y="20" width="100" height="62" rx="8" fill="#241a1c" stroke="#6b5a5d" stroke-width="2" />
+          <path d="M10 28L60 62L110 28" fill="none" stroke="#6b5a5d" stroke-width="2" />
+          <path d="M10 82L46 52M110 82L74 52" stroke="#4a3b3e" stroke-width="2" />
+        </svg><span class="lock"><svg viewBox="0 0 24 24">
+            <path class="sh" d="M7 11V8a5 5 0 0 1 10 0v3" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" />
+            <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor" />
+          </svg></span></div>
+      <h2>You have a message</h2>
+      <div class="prog" id="prog" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <p class="stat" id="stat">Answer to unlock · 0/10</p>
+      <p id="gtxt">Answer 10 questions about me to unlock it.</p>
+      <div class="quiz" id="quiz"></div>
+      <p class="gmsg" id="gmsg" aria-live="polite"></p>
+      <button class="start" id="start" type="button" disabled
+        aria-label="Start the engine to open your message">Start</button>
+      <div><button class="again" id="skip" type="button" hidden>Skip the game</button></div>
+    </section>
+
+    <section id="msg" aria-live="polite">
+      <div class="chat" id="chat">
+        <div class="chead"><span class="av" aria-hidden="true"><img src="avatar.jpg" alt=""></span>
+          <div><b>JusilGwapa</b><small><i class="dot"></i>Active now</small></div>
+        </div>
+        <div class="cbody" id="cbody" aria-live="polite"></div>
+      </div>
+      <section class="photos usc" id="us" aria-label="Our photos">
+        <h2>The Sequel of US</h2>
+        <p>Time tested us, distance changed us, but fate kept choosing us.</p>
+        <div class="strip">
+          <div class="track" id="t3"></div>
+        </div>
+        <div class="strip rv">
+          <div class="track" id="t4"></div>
+        </div>
+      </section>
+      <div style="text-align:center"><button class="again" id="again" type="button">Close message</button></div>
+    </section>
+  </main>
+  <footer>Happy birthday, Barek</footer>
+  <button class="music" id="music" type="button">♪ Song: off</button>
+  <button class="totop" id="totop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <circle class="trk" cx="24" cy="24" r="21" />
+      <circle class="prg" id="totopRing" cx="24" cy="24" r="21" />
+      <path d="M24 31V17M17 23.5L24 16.5L31 23.5" />
+    </svg>
+  </button>
+
+  <div class="ride" id="ride" aria-hidden="true">
+    <div class="bike">
+      <i class="ln" style="top:22%;width:90%"></i><i class="ln r" style="top:38%;width:120%"></i><i class="ln"
+        style="top:54%;width:100%"></i><i class="ln r" style="top:70%;width:80%"></i>
+      <i class="fl"></i><i class="puff"></i><i class="puff" style="animation-delay:.25s"></i><i class="puff"
+        style="animation-delay:.5s"></i><i class="puff" style="animation-delay:.75s"></i>
+      <svg viewBox="0 0 300 170">
+        <g class="wheel">
+          <circle cx="65" cy="125" r="34" fill="none" stroke="#ece6e6" stroke-width="10" />
+          <circle cx="65" cy="125" r="20" fill="none" stroke="var(--silver)" stroke-width="3" />
+          <path d="M65 105V145M45 125H85" stroke="var(--silver)" stroke-width="3" />
+        </g>
+        <g class="wheel">
+          <circle cx="235" cy="125" r="34" fill="none" stroke="#ece6e6" stroke-width="10" />
+          <circle cx="235" cy="125" r="20" fill="none" stroke="var(--silver)" stroke-width="3" />
+          <path d="M235 105V145M215 125H255" stroke="var(--silver)" stroke-width="3" />
+        </g>
+        <path d="M65 125L110 90H190L235 125" fill="none" stroke="var(--red)" stroke-width="8" stroke-linejoin="round" />
+        <path d="M95 92Q120 62 175 80L190 92Z" fill="var(--red)" />
+        <path d="M190 92L210 55H230" fill="none" stroke="var(--silver)" stroke-width="6" stroke-linecap="round" />
+        <rect x="100" y="100" width="60" height="22" rx="6" fill="#ece6e6" />
+        <circle cx="225" cy="62" r="9" fill="#ffe27a" />
+        <path d="M120 80Q125 40 150 38L165 55L205 56L215 70" fill="none" stroke="var(--soft)" stroke-width="12"
+          stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="152" cy="22" r="17" fill="#000" stroke="var(--silver)" stroke-width="2" />
+        <path d="M138 24Q152 8 170 20" fill="none" stroke="var(--silver)" stroke-width="4" />
+        <path d="M137 28L128 18L141 21Z M146 12L142 0L154 8Z" fill="#000" />
+        <path d="M108 40Q96 50 90 70" fill="none" stroke="var(--red)" stroke-width="7" stroke-linecap="round" />
+      </svg>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
